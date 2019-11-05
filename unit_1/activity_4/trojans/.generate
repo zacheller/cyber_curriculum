@@ -1,0 +1,4 @@
+#!/bin/bash
+for n in {000..1000}; do
+    dd if=/dev/urandom of=trojan_$( printf %03d "$n" ).exe bs=1 count=$(( RANDOM + 1024 ))
+done
